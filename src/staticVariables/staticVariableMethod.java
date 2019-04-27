@@ -1,8 +1,13 @@
 package staticVariables;
 
 public class staticVariableMethod {
-	static int a = 0;
+	static int staticVariable = 0;
+	int classVariable = 0;
 	public void increaseStatic() {
-		a++;
+		staticVariable++;
+		classVariable++;
+	}
+	public static void increaseStatic1() {
+		staticVariable++;
 	}
 }
