@@ -5,7 +5,7 @@ import java.util.TreeSet;
 public class SortNumbers {
 
 	public static void main(String[] args) {
-		TreeSet<Integer> list = new TreeSet<Integer>(new MyComparator());
+		TreeSet<Integer> list = new TreeSet<Integer>(/*new MyComparator()*/);
 		list.add(8);
 		list.add(1);
 		list.add(9);

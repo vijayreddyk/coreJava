@@ -27,7 +27,7 @@ public class DistinctelementsInMatrix {
 		System.out.println(noOfUniqueEles.toString());
 		HashSet<Integer> keySet = (HashSet<Integer>) noOfUniqueEles.keySet();
 		for(Integer key:keySet) {
-			if()
+			//if()
 		}
 		
 	}

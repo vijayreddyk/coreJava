@@ -15,6 +15,7 @@ public class hashSet {
 		HashSet<String> hashSet = new HashSet<String>();
 		TreeSet<String> treeSet = new TreeSet<String>();
 		LinkedHashSet<String> linkedHashSet = new LinkedHashSet<String>();
+		@SuppressWarnings("unused")
 		AbstractSet<String> abstractSet = new AbstractSet<String>() {
 			@Override
 			public Iterator<String> iterator() {
@@ -33,6 +34,7 @@ public class hashSet {
 		addElementstoBitSet(bitSet);
 	}
 
+	@SuppressWarnings("unchecked")
 	private static void addElementstoBitSet(BitSet bitSet) {
 		for(int i=1;i<=10;i++) {
 			((Set<String>) bitSet).add(i+"");
