@@ -54,6 +54,19 @@ class DoubleLinkedList{
 			end = newNode;
 		}
 	}
+	public void insertAtPos(int data,int pos) {
+		DoubleLinkedNode temp = begin;
+		while(pos > 1 && temp!=null) {
+			temp = temp.getNext();
+			pos--;
+		}
+		DoubleLinkedNode nextNode = temp.getNext();
+		DoubleLinkedNode newNode = new DoubleLinkedNode(data, null, null);
+		temp.setNext(newNode);
+		newNode.setPrev(temp);
+		newNode.setNext(nextNode);
+		nextNode.setPrev(newNode);
+	}
 	public void deleteAtEnd() {
 		if(end == null) {
 			System.out.println("List is Empty");
@@ -108,6 +121,7 @@ public class MyDoubleLinkedList {
 		list.insertAtStart(4);
 		list.insertAtEnd(5);
 		list.insertAtStart(5);
+		list.insertAtPos(-1, 5);
 		System.out.println(list.toString());
 	}
 
