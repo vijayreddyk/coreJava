@@ -18,7 +18,7 @@ public class StreamDemo {
 		li.forEach((val)->{
 			System.out.println(val);
 		});
-		/*Stream<Integer> stream = li.stream();
+		Stream<Integer> stream = li.stream();
 		Optional<Integer> minVal = stream.min(Integer::compare);
 		stream = li.stream();
 		Optional<Integer> maxVal = stream.max(Integer::compare);
@@ -26,7 +26,7 @@ public class StreamDemo {
 		Stream<Integer> sortedStream = li.stream().sorted();
 		sortedStream.forEach((n)->System.out.println(n));
 		Stream<Integer> oddStream = li.stream().sorted().filter((n)->(n%2 == 1));
-		oddStream.forEach((n)->System.out.println(n));*/
+		oddStream.forEach((n)->System.out.println(n));
 		li.stream().parallel().forEach((n)->{
 			System.out.println(n);
 		});

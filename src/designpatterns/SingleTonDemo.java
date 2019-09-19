@@ -1,12 +1,12 @@
 package designpatterns;
 class SingleTonObj{
 	public static int counter = 0;
-	private static SingleTonObj sto = new SingleTonObj();
+	private static SingleTonObj sto = null;
 	private SingleTonObj() {
 		
 	}
 	public static SingleTonObj getSingTonObj(){
-		counter++;
+		sto = new SingleTonObj();
 		return sto;
 	}
 }
