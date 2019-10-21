@@ -2,7 +2,7 @@ package threads;
 class A{
 	public synchronized void  first(B b) {
 		String name = Thread.currentThread().getName();
-		System.out.println(name+" thread entered A ");
+		System.out.println(name+" entered A ");
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {

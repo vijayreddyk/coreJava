@@ -17,7 +17,7 @@ public class ConcurrentModificationException extends Thread {
 		}
 		synchronized(li) {
 			li.add(100);
-			System.out.println(li);
+			System.out.println(Thread.currentThread().getName()+"=>>"+li);
 		}
 	}
 	public static void main(String[] args) throws InterruptedException {
@@ -29,7 +29,7 @@ public class ConcurrentModificationException extends Thread {
 		synchronized(li) {
 			Iterator<Integer> itr = li.iterator();
 			while(itr.hasNext()) {
-				System.out.println(itr.next());
+				System.out.println(Thread.currentThread().getName()+"=>>"+itr.next());
 				Thread.sleep(1000);
 			}
 		}
