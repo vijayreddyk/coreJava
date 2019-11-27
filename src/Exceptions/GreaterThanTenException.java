@@ -2,10 +2,12 @@ package Exceptions;
 
 public class GreaterThanTenException extends Exception {
 
+	
+
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 8397991709557071488L;
 
 	public GreaterThanTenException() {
 	}

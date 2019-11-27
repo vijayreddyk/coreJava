@@ -83,6 +83,18 @@ class DoubleLinkedList{
 			begin.setPrev(null);
 		}
 	}
+	public void reverseDoublyLinkedList() {
+		DoubleLinkedNode prev = null;
+		DoubleLinkedNode current = begin;
+		DoubleLinkedNode next = null;
+		while(current!=null) {
+			next = current.getNext();
+			current.setNext(prev);
+			prev = current;
+			current = next;
+		}
+		begin = prev;
+	}
 	@Override
 	public String toString() {
 		DoubleLinkedNode positionNode = begin;
@@ -121,7 +133,9 @@ public class MyDoubleLinkedList {
 		list.insertAtStart(4);
 		list.insertAtEnd(5);
 		list.insertAtStart(5);
-		list.insertAtPos(-1, 5);
+		//list.insertAtPos(-1, 5);
+		System.out.println(list.toString());
+		list.reverseDoublyLinkedList();
 		System.out.println(list.toString());
 	}
 

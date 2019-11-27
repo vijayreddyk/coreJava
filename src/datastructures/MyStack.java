@@ -33,7 +33,20 @@ class Stack{
         } 
         top = prev; 
         return top; 
-    } 
+    }
+    Node reverseStack() {
+    	Node prev = null;
+    	Node current = top;
+    	Node next = null;
+    	while(current!=null) {
+    		next = current.getNextNode();
+    		current.setNextNode(prev);
+    		prev = current;
+    		current = next;
+    	}
+    	top = prev;
+    	return top;
+    }
 	@Override
 	public String toString() {
 		Node positionNode = top;

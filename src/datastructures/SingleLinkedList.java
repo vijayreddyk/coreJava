@@ -71,7 +71,7 @@ class LinkedList{
 	}
 	public void delete(int pos) {
 		if(pos < 0) {
-			
+			System.out.println("Postion can not be less than 0");
 		} else if(pos == 0) {
 			headNode = headNode.getNextNode();
 		} else if(pos > 0) {
