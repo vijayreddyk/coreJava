@@ -35,7 +35,7 @@ public class ThrowableExtendedException extends Exception{
 	@Override
 	public synchronized Throwable getCause() {
 		
-		return new ArrayIndexOutOfBoundsException();
+		return new StringIndexOutOfBoundsException();
 	}
 	@Override
 	public void printStackTrace() {
