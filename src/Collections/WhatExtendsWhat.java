@@ -33,9 +33,9 @@ public class WhatExtendsWhat {
 		 * 2.interface Collection<E> extends Iterable<E>.
 		 * 3.interface List<E> extends Collection<E>.
 		 * 4.abstract class AbstractCollection<E> implements Collection<E>.
-		 * 5.class ArrayList<E> extends AbstractList<E> implements List<E>, RandomAccess, Cloneable, java.io.Serializable.
-		 * 6.abstract class AbstractList<E> extends AbstractCollection<E> implements List<E>.
-		 * 7.abstract class AbstractSequentialList<E> extends AbstractList<E>.
+		 * 5.abstract class AbstractList<E> extends AbstractCollection<E> implements List<E>. 
+		 * 6.abstract class AbstractSequentialList<E> extends AbstractList<E>. 
+		 * 7.class ArrayList<E> extends AbstractList<E> implements List<E>, RandomAccess, Cloneable, java.io.Serializable.
 		 * 8.class LinkedList<E> extends AbstractSequentialList<E> implements List<E>, Deque<E>, Cloneable, java.io.Serializable.
 		 * 8(a).class Vector<E> extends AbstractList<E> implements List<E>, RandomAccess, Cloneable, java.io.Serializable.
 		 * 8(b).class Stack<E> extends Vector<E>.
@@ -55,8 +55,8 @@ public class WhatExtendsWhat {
 		 * 16(a).interface Deque<E> extends Queue<E>.
 		 * 17.class ArrayDeque<E> extends AbstractCollection<E> implements Deque<E>, Cloneable, Serializable.
 		 * 18.class PriorityQueue<E> extends AbstractQueue<E> implements java.io.Serializable.
-		 * 19.abstract class EnumSet<E extends Enum<E>> extends AbstractSet<E> implements Cloneable, java.io.Serializable.
-		 * 19(a).abstract class Enum<E extends Enum<E>> implements Comparable<E>, Serializable.
+		 * 19.abstract class Enum<E extends Enum<E>> implements Comparable<E>, Serializable.
+		 * 19(a).abstract class EnumSet<E extends Enum<E>> extends AbstractSet<E> implements Cloneable, java.io.Serializable.
 		 * 
 		 * 
 		 * 19(b).interface Comparable<T>.

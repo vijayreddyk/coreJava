@@ -1,4 +1,7 @@
 package datastructures;
+
+import java.util.HashSet;
+
 class Node{
 	private int data;
 	private Node nextNode;
@@ -95,6 +98,62 @@ class LinkedList{
 			}
 		}
 	}
+	public void removeDuplicates() {
+		if(headNode==null)
+			return;
+		Node current = headNode;
+		Node next = current.getNextNode();
+		
+		while(next!=null) {
+			if(current.getData()==next.getData()) {
+				if(next.getNextNode()!=null) {
+					current.setNextNode(next.getNextNode());
+				} else {
+					current.setNextNode(null);
+				}
+				next = current.getNextNode();
+			} else {
+				current = current.getNextNode();
+				if(current!=null)
+					next = current.getNextNode();
+				else
+					next=null;
+			}
+		}
+	}
+	
+	public void removeDuplicatesFromUnsortedlist() {
+		if(headNode == null)
+			return;
+		else if(headNode.getNextNode()==null)
+			return;
+		HashSet<Integer> hs = new HashSet<>();
+		hs.add(headNode.getData());
+		Node prev = headNode;
+		Node temp = headNode.getNextNode();
+		while(temp!=null) {
+			if(hs.contains(temp.getData())) {
+				prev.setNextNode(temp.getNextNode());
+				temp = prev.getNextNode();
+			} else {
+				hs.add(temp.getData());
+				prev = temp;
+				temp = temp.getNextNode();
+			}
+		}
+	}
+	public void middleElementOfLinkedList() {
+		Node temp = headNode;
+		Node temp1 = headNode;
+		while(temp1!=null && temp1.getNextNode()!=null) {
+			temp = temp.getNextNode();
+			temp1 = temp1.getNextNode();
+			if(temp1!=null)
+				temp1 = temp1.getNextNode();
+			//System.out.println(temp.getData()+"  "+temp1.getData());
+		}
+		System.out.println(temp.getData());
+	}
 	@Override
 	public String toString() {
 		Node positionNode = headNode;
@@ -111,6 +170,8 @@ public class SingleLinkedList {
 	public static void main(String[] args) {
 		LinkedList list = new LinkedList();
 		list.insert(2);
+		list.insert(2);
+		list.insert(2);
 		System.out.println(list.toString());
 		list.insert(5);
 		System.out.println(list.toString());
@@ -120,13 +181,19 @@ public class SingleLinkedList {
 		System.out.println(list.toString());
 		list.insert(-9,0);
 		System.out.println(list.toString());
-		list.insert(9,9);
-		System.out.println(list.toString());
+		list.insert(10,6);
+		list.insert(10,6);
 		list.insert(10,6);
 		System.out.println(list.toString());
 		list.delete();
 		System.out.println(list.toString());
 		list.delete(2);
+		list.insert(7);
+		list.insert(11);
+		//list.insert(12);
 		System.out.println(list.toString());
+		list.removeDuplicatesFromUnsortedlist();
+		System.out.println(list.toString());
+		list.middleElementOfLinkedList();
 	}
 }
